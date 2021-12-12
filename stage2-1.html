@@ -22,7 +22,7 @@
       function wakeUp() {
         sleepiness -= 5;
         if (!triggered) {
-          setTimeout(unhide, 7000);
+          setTimeout(unhide, 5000);
         }
         var triggered = 1;
         
@@ -41,6 +41,7 @@
         if (sleepiness <= 0) {
           clearInterval(interval);
           innerText = "How?!?!?";
+          unhide();
         }
         document.getElementById("sleepMeter").innerText = innerText;
       }
