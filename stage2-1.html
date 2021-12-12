@@ -18,12 +18,13 @@
   
     <script>
       var sleepiness = 20;
+      var triggered;
       function wakeUp() {
         sleepiness -= 5;
         if (!triggered) {
           setTimeout(unhide, 10000);
         }
-        let triggered = 1;
+        var triggered = 1;
         
       }
       function unhide() {
