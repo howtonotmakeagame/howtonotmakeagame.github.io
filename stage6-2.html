@@ -12,7 +12,7 @@
     <button onclick="tv()">Watch TV!</button>
     <br>
     <p id="tvText1" hidden>Loading Programs...</p>
-    <p id="tvText2" hidden>Now, here's a message from our sponsors!</p>
+    <p id="tvText2" hidden>Now, here's a 30 second message from our sponsors!</p>
     <video width="640" height="480" id="tv" hidden>
       <source src="grammarly.mp4" type=video/ogg>
     </video>
@@ -25,10 +25,13 @@
       function tv() {
         let x = document.getElementById("tv");
         x.play();
+        setTimeout(unhide, 30000);
         document.getElementById("tv").hidden = false;
         document.getElementById("tvText1").hidden = false;
         document.getElementById("tvText2").hidden = false;
         document.getElementById("levelEndText1").hidden = false;
+      }
+      function unhide() {
         document.getElementById("moral").hidden = false;
         document.getElementById("levelEndText2").hidden = false;
         document.getElementById("next").hidden = false;
