@@ -7,12 +7,13 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Level 4-2</h1>
-    <p>Bob finally thinks he has enough sandwiches to enjoy his lunch. Bob also wants to listen to something, so why not listen to some calming music?</p>
-    <p>Note: This isn't a rickroll. I already did that in Level 2-2.</p>
-    <button onclick="music()">Calming Music</button>
-    <p id="musicText" hidden>Ahhh... On days like these, Bob wonders what could possibly go wrong.</p>
-
+    <div>
+      <h1>Level 4-2</h1>
+      <p>Bob finally thinks he has enough sandwiches to enjoy his lunch. Bob also wants to listen to something, so why not listen to some calming music?</p>
+      <p>Note: This isn't a rickroll. I already did that in Level 2-2.</p>
+      <button onclick="music()">Calming Music</button>
+      <p id="musicText" hidden>Ahhh... On days like these, Bob wonders what could possibly go wrong.</p>
+    </div>
     <script>
       var strad = new Audio("strad.oga");
       function music() {
@@ -22,7 +23,7 @@
           strad.pause();
           strad = new Audio("rickRoll.mp3");
           strad.play();
-          //document.querySelector('html').innerHTML = "\r\n<html>\r\n  <head>\r\n    <meta charset=\"utf-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width\">\r\n    <title>Work Simulator<\/title>\r\n    <link href=\"style.css\" rel=\"stylesheet\" type=\"text\/css\" \/>\r\n  <\/head>\r\n  <body>\r\n    <h1>ERROR<\/h1>\r\n    <p>THIS WEBSITE INFRINGES THE MOJANG UELA (USER END LICENSE AGREEMENT) AND TERMS OF SERVICE. PLEASE ENJOY LISTENING TO RICK ASTLEY\'S \"NEVER GONNA GIVE YOU UP\" INSTEAD.<\/p>\r\n    <h2>The Moral: Please consider copyright licenses before including images\/audio in your programs.<\/h2>\r\n    <button onclick=\"window.location.href=\'\/stage4-3.html\'\">Next<\/button>\r\n\r\n    <script>\r\n      var music = new Audio(\"rickRoll.mp3\");\r\n      music.play();\r\n    <\/script>\r\n  \r\n  <\/body>\r\n<\/html>"
+          document.querySelector('div').innerHTML = "<h1>ERROR<\/h1>\r\n    <p>THIS WEBSITE INFRINGES THE MOJANG UELA (USER END LICENSE AGREEMENT) AND TERMS OF SERVICE. PLEASE ENJOY LISTENING TO RICK ASTLEY\'S \"NEVER GONNA GIVE YOU UP\" INSTEAD.<\/p>\r\n    <h2>The Moral: Please consider copyright licenses before including images\/audio in your programs.<\/h2>\r\n    <button onclick=\"window.location.href=\'\/stage4-3.html\'\">Next<\/button>\r\n\r\n"
         }, 10000);
       }
     </script>
