@@ -9,7 +9,7 @@
   <body>
     <h1>Level 3-3</h1>
     <p>We've easily logged into Bob's computer. Bob needs to type a report for his boss, so let's help him do that.</p>
-    <textarea autofocus>Type a report for Bob here.</textarea>
+    <textarea id="textareabox" autofocus>Type a report for Bob here.</textarea>
     <button onclick="submit()" id="submit">Submit Report</button>
     <p id="levelEndText" hidden>Whew, I'm done typing up my 5-page report on American unemployment! Wait, what? It doesn't matter what you type there? Seriously?!?!?!?</p>
     <p id="alttext" hidden>Seriously? You didn't type anything in the box at all?</p>
@@ -27,6 +27,7 @@
         document.getElementById("next").hidden = false;
         document.getElementById("submit").innerText = "Submitted!";
       }
+      
     </script>
   </body>
 </html>
