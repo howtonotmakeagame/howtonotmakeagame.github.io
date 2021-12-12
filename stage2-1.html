@@ -20,6 +20,13 @@
       var sleepiness = 20;
       function wakeUp() {
         sleepiness -= 5;
+        if (!triggered) {
+          setTimeout(unhide, 10000);
+        }
+        let triggered = 1;
+        
+      }
+      function unhide() {
         document.getElementById("levelEndText").hidden = false;
         document.getElementById("moral").hidden = false;
         document.getElementById("next").hidden = false;
